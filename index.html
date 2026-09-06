@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Strength Analyzer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 { color: #1e3a8a; margin-top: 0; }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 15px 0 5px 0;
+            border: 2px solid #cbd5e1;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        .bar-container {
+            height: 8px;
+            background-color: #e2e8f0;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .bar {
+            height: 100%;
+            width: 0%;
+            transition: width 0.3s ease, background-color 0.3s ease;
+        }
+        .status { font-weight: bold; margin-bottom: 10px; }
+        .feedback { color: #64748b; font-size: 14px; line-height: 1.5; }
+        .suggestion {
+            margin-top: 15px;
+            background: #f0fdf4;
+            padding: 10px;
+            border-left: 4px solid #22c55e;
+            font-size: 14px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h2>Password Analyzer</h2>
+    <p>Internship Assignment 1</p>
+    
+    <input type="text" id="passwordInput" placeholder="Type a password here...">
+    
+    <div class="bar-container">
+        <div id="strengthBar" class="bar"></div>
+    </div>
+    
+    <div id="statusText" class="status">Enter a password to start</div>
+    <div id="feedbackText" class="feedback"></div>
+    <div id="suggestionText" class="suggestion" style="display:none;"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
